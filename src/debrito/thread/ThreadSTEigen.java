@@ -27,7 +27,6 @@ public class ThreadSTEigen extends Thread{
 	}
 	
 	public void run() {
-		
 		double[][] Mm ; 
 		Double2DReal M ; 
 	    double [] vectPropre,valPropre ; 

@@ -29,7 +29,7 @@ public class ThreadEllipso2DOverlay extends Thread{
 			Ellipso2DTensor e = new Ellipso2DTensor(d[0],d[1],d[3],d[2],d[4]); //construct the ellipse
 			Color c = new Color((int)d[6],0,(int)d[5]) ; //set the color
 			e.setColor(c);
-			Overlay o = e.toOverlay() ; 
+			Overlay o = e.toOverlay() ;
 			se.addOverlay(o) ; //add the ellipse on the image
 		}
 	}

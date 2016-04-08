@@ -1,4 +1,4 @@
-package plugins.ITAV.StructureTensor;
+package plugins.weiss.StructureTensor2D;
 
 import java.awt.Rectangle;
 import java.util.LinkedList;
@@ -46,7 +46,7 @@ import plugins.adufour.vars.lang.VarROIArray;
  * @author DE BRITO Guillaume with the help of WEISS Pierre and FEHRENBACH Jerôme
  *
  */
-public class StructureTensor extends EzPlug implements Block {
+public class StructureTensor2D extends EzPlug implements Block {
 
 	
 	EzVarSequence 		varCurrentSeq                     = new EzVarSequence("Input Sequence") ; 
@@ -148,6 +148,7 @@ public class StructureTensor extends EzPlug implements Block {
 						if (choiceEllipse) {
 							Sequence se2 = new Sequence() ; 
 							se2.addImage(0, img);
+							se2.setName("Ellipse - Sigma " + sigma + " / Delta " + delta);
 							this.addSequence(se2);
 							varSeEllipse.setValue(se2);
 							ellipseProcessing(se2,lShapParam);
@@ -155,6 +156,7 @@ public class StructureTensor extends EzPlug implements Block {
 						if (choiceSegment) {
 							Sequence se3 = new Sequence() ; 
 							se3.addImage(0, img);
+							se3.setName("Segment - Sigma " + sigma + " / Delta " + delta);
 							this.addSequence(se3);
 							varSeSegment.setValue(se3);
 							segmentProcessing(se3,lShapParam);
@@ -162,6 +164,7 @@ public class StructureTensor extends EzPlug implements Block {
 						if (choiceBoth) {
 							Sequence se4 = new Sequence() ; 
 							se4.addImage(0, img);
+							se4.setName("Both - Sigma " + sigma + " / Delta " + delta);
 							this.addSequence(se4);
 							varSeBoth.setValue(se4);
 							ellipseProcessing(se4,lShapParam);
